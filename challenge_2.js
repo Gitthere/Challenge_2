@@ -31,29 +31,56 @@ exports.sumOfEvenFibonacciNumbers = function(n){
 // #######################
 
 
+// var fibs = 0; //actual found fib
+// var fib1 = 0;
+// var fib2 = 1;
+// var evenFibs = 0;
+
+// while(true){
+//   //if(i++ )
+    
+//   //break out of loop condition
+//   if (fib1+fib2 >n) {
+//     break;
+//   }//else
+
+//   fib = fib1 + fib2;
+
+//   //incrementing
+//   fib1 = fib2;
+//   fib2 =  fibs;
+// }
+
+// if(fibs % 2 == 0) {
+//   evenFibs += fibs;
+// }
+
+// return evenfibs
+
+
+//get fibs nums up to n
 var fibs = 0; //actual found fib
 var fib1 = 0;
 var fib2 = 1;
 var evenFibs = 0;
 
-while(true){
-  //if(i++ )
-    
-  //break out of loop condition
-  if (fib1+fib2 >n) {
-    break;
-  }//else
+for (
+    fibs;                 //current fib sequence
+    fibs <= 4000000;           //count up to n
+    fibs = fib1 + fib2    //updating current fib
+    )
 
-  fib = fib1 + fib2;
-
+{
   //incrementing
   fib1 = fib2;
-  fib2 =  fibs;
-}
+  fib2 = fibs;
 
-  if(fibs % 2 == 0) {
+  if (fibs % 2 == 0) {
     evenFibs += fibs;
   }
 
-return evenfibs
+}
+console.log(evenFibs);
+return evenFibs;
+
 };
